@@ -58,10 +58,40 @@ function shuffle(cardArray) {
   }
   return cardArray;
 }
+
 console.log(shuffle(cardArray));
+const shuffledCards = shuffle(cardArray);
 
 for (let i = 0; i < cardArray.length; i++) {
-  const newCard = document.createElement("div");
-  cardContainer.append(newCard);
-  newCard.classList.add("card", "face-down");
+  const flipCard = document.createElement("div");
+  cardContainer.append(flipCard);
+  flipCard.classList.add("flip-card");
+
+  const flipCardInner = document.createElement("div");
+  flipCard.append(flipCardInner);
+  flipCardInner.classList.add("flip-card-inner");
+
+  const flipCardFront = document.createElement("div");
+  flipCardInner.append(flipCardFront);
+  flipCardFront.classList.add("flip-card-front");
+  // flipCardFront.style.backgroundImage = shuffledCards[i].image;
+
+  const flipCardBack = document.createElement("div");
+  flipCardInner.append(flipCardBack);
+  flipCardBack.classList.add("flip-card-back");
+
+  // Stuff for image if we end up needing it
+  const cardImage = document.createElement("img");
+  flipCardBack.append(cardImage);
+  cardImage.src = shuffledCards[i].image;
+  cardImage.alt = shuffledCards[i].animal;
+  cardImage.style.width = "50px";
+  cardImage.style.height = "100px";
+  //  flipCardBack.classList.add("flip-card-back");
 }
+
+cardContainer.addEventListener("click", (e) => {
+  if (e.target.classList.contains(".flip-card"))
+    // e.target.style.transition = "transform 2s";
+    e.target.style.transform = "rotateY(180deg)";
+});
