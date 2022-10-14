@@ -1,3 +1,15 @@
+body {
+  /* width: 99vw; */
+  height: 100vh;
+  background-image: url(assets/main-background.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+h1 {
+  margin-top: 0;
+  margin-left: 10px;
+}
 main {
   display: flex;
   flex-direction: column;
@@ -55,7 +67,9 @@ main {
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: #bbb;
+  background-image: url(assets/card-background.png);
+  background-size: 50px 100px;
+  /* background-color: #bbb; */
   color: black;
 }
 

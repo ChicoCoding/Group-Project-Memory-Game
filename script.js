@@ -117,8 +117,8 @@ cardContainer.addEventListener("click", (e) => {
         cardTwo.getAttribute("data-animal")
       ) {
         setTimeout(() => {
-          cardTwo.parentNode.parentNode.remove();
-          cardOne.parentNode.parentNode.remove();
+          cardTwo.parentNode.remove();
+          cardOne.parentNode.remove();
         }, 1000);
       }
     }
