@@ -4,42 +4,42 @@ const cardContainer = document.querySelector(".card-container");
 const cardArray = [
   {
     animal: "capybara",
-    image: "path to image, as a string",
+    image: "assets/capybara.jpg",
     id: 1,
   },
   {
-    animal: "cat",
-    image: "path to image, as a string",
+    animal: "llama",
+    image: "assets/llama.jpg",
     id: 2,
   },
   {
-    animal: "dog",
-    image: "path to image, as a string",
+    animal: "cockatoo",
+    image: "assets/cockatoo.jpg",
     id: 3,
   },
   {
-    animal: "cockatoo",
-    image: "path to image, as a string",
+    animal: "bison",
+    image: "assets/bison.jpg",
     id: 4,
   },
   {
-    animal: "octopus",
-    image: "path to image, as a string",
+    animal: "capybara",
+    image: "assets/capybara.jpg",
     id: 5,
   },
   {
-    animal: "bumble bee",
-    image: "path to image, as a string",
+    animal: "llama",
+    image: "assets/llama.jpg",
     id: 6,
   },
   {
-    animal: "bison",
-    image: "path to image, as a string",
+    animal: "cokatoo",
+    image: "assets/cockatoo.jpg",
     id: 7,
   },
   {
-    animal: "llama",
-    image: "path to image, as a string",
+    animal: "bison",
+    image: "assets/bison.jpg",
     id: 8,
   },
 ];
