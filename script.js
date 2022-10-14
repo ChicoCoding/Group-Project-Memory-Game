@@ -33,7 +33,7 @@ const cardArray = [
     id: 6,
   },
   {
-    animal: "cokatoo",
+    animal: "cockatoo",
     image: "assets/cockatoo.jpg",
     id: 7,
   },
@@ -74,6 +74,7 @@ for (let i = 0; i < cardArray.length; i++) {
   const flipCardFront = document.createElement("div");
   flipCardInner.append(flipCardFront);
   flipCardFront.classList.add("flip-card-front");
+  flipCardFront.setAttribute("data-animal", shuffledCards[i].animal);
   // flipCardFront.style.backgroundImage = shuffledCards[i].image;
 
   const flipCardBack = document.createElement("div");
@@ -90,8 +91,20 @@ for (let i = 0; i < cardArray.length; i++) {
   //  flipCardBack.classList.add("flip-card-back");
 }
 
+let cardOne = null;
+let cardTwo = null;
+
 cardContainer.addEventListener("click", (e) => {
-  if (e.target.classList.contains(".flip-card"))
-    // e.target.style.transition = "transform 2s";
-    e.target.style.transform = "rotateY(180deg)";
+  console.log(e.target.parentNode.parentNode);
+  if (e.target.classList.contains("flip-card-front")) {
+    e.target.parentNode.classList.add("flip");
+    if (cardOne === null) {
+      cardOne = e.target;
+    } else {
+      cardTwo = e.target;
+    }
+    setTimeout(() => {
+      e.target.parentNode.classList.remove("flip");
+    }, 1000);
+  }
 });
