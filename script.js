@@ -96,15 +96,31 @@ let cardTwo = null;
 
 cardContainer.addEventListener("click", (e) => {
   console.log(e.target.parentNode.parentNode);
-  if (e.target.classList.contains("flip-card-front")) {
+  if (
+    (e.target.classList.contains("flip-card-front") && cardOne === null) ||
+    cardTwo === null
+  ) {
     e.target.parentNode.classList.add("flip");
     if (cardOne === null) {
       cardOne = e.target;
     } else {
       cardTwo = e.target;
+      setTimeout(() => {
+        cardOne.parentNode.classList.remove("flip");
+        cardTwo.parentNode.classList.remove("flip");
+        cardOne = null;
+        cardTwo = null;
+      }, 1300);
+
+      if (
+        cardOne.getAttribute("data-animal") ===
+        cardTwo.getAttribute("data-animal")
+      ) {
+        setTimeout(() => {
+          cardTwo.parentNode.parentNode.remove();
+          cardOne.parentNode.parentNode.remove();
+        }, 1000);
+      }
     }
-    setTimeout(() => {
-      e.target.parentNode.classList.remove("flip");
-    }, 1000);
   }
 });
