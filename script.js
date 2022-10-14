@@ -44,12 +44,24 @@ const cardArray = [
   },
 ];
 
-/*
-for (let i = 0; i < 16; i++) {
+function shuffle(cardArray) {
+  let m = cardArray.length,
+    t,
+    i;
+
+  while (m) {
+    i = Math.floor(Math.random() * m--);
+
+    t = cardArray[m];
+    cardArray[m] = cardArray[i];
+    cardArray[i] = t;
+  }
+  return cardArray;
+}
+console.log(shuffle(cardArray));
+
+for (let i = 0; i < cardArray.length; i++) {
   const newCard = document.createElement("div");
   cardContainer.append(newCard);
-  newCard.classList.add("card");
-  // TO DO: Add randomization of cards/images
-  newCard.setAttribute("data-id", i);
+  newCard.classList.add("card", "face-down");
 }
-*/
