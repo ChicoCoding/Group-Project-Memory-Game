@@ -42,6 +42,26 @@ const cardArray = [
     image: "assets/bison.jpg",
     id: 8,
   },
+  {
+    animal: "goose",
+    image: "assets/geese.jpg",
+    id: 9,
+  },
+  {
+    animal: "grizzly",
+    image: "assets/grizzly.jpg",
+    id: 10,
+  },
+  {
+    animal: "goose",
+    image: "assets/geese.jpg",
+    id: 11,
+  },
+  {
+    animal: "grizzly",
+    image: "assets/grizzly.jpg",
+    id: 12,
+  },
 ];
 
 function shuffle(cardArray) {
@@ -86,7 +106,7 @@ for (let i = 0; i < cardArray.length; i++) {
   flipCardBack.append(cardImage);
   cardImage.src = shuffledCards[i].image;
   cardImage.alt = shuffledCards[i].animal;
-  cardImage.style.width = "50px";
+  cardImage.style.width = "75px";
   cardImage.style.height = "100px";
   //  flipCardBack.classList.add("flip-card-back");
 }
@@ -152,7 +172,7 @@ const timerFunction = () => {
       timeSeconds = 0;
       timeMinutes++;
     }
-    timer.textContent = `Timer: ${timeMinutes} min:${timeSeconds} sec`;
+    timer.textContent = `Timer: ${timeMinutes}:${timeSeconds}`;
     if (score === cardArray.length / 2) {
       started = false;
       popup.style.display = "block";
