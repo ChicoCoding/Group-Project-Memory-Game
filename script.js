@@ -97,8 +97,8 @@ let cardTwo = null;
 cardContainer.addEventListener("click", (e) => {
   console.log(e.target.parentNode.parentNode);
   if (
-    (e.target.classList.contains("flip-card-front") && cardOne === null) ||
-    cardTwo === null
+    e.target.classList.contains("flip-card-front") &&
+    (cardOne === null || cardTwo === null)
   ) {
     e.target.parentNode.classList.add("flip");
     if (cardOne === null) {
