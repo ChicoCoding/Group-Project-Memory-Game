@@ -93,12 +93,15 @@ for (let i = 0; i < cardArray.length; i++) {
 
 let cardOne = null;
 let cardTwo = null;
+let started = false;
+let score = 0;
 
 cardContainer.addEventListener("click", (e) => {
   console.log(e.target.parentNode.parentNode);
   if (
     e.target.classList.contains("flip-card-front") &&
-    (cardOne === null || cardTwo === null)
+    (cardOne === null || cardTwo === null) &&
+    started
   ) {
     e.target.parentNode.classList.add("flip");
     if (cardOne === null) {
@@ -117,6 +120,7 @@ cardContainer.addEventListener("click", (e) => {
         cardTwo.getAttribute("data-animal")
       ) {
         setTimeout(() => {
+          score++;
           cardTwo.parentNode.remove();
           cardOne.parentNode.remove();
         }, 1000);
@@ -124,3 +128,28 @@ cardContainer.addEventListener("click", (e) => {
     }
   }
 });
+
+const startButton = document.querySelector(".start");
+startButton.addEventListener("click", (e) => {
+  started = true;
+});
+
+const timer = document.querySelector(".timer");
+
+let timeSeconds = 0;
+let timeMinutes = 0;
+const timerFunction = () => {
+  if (started) {
+    // console.log(`Timer: ${timeMinutes}:${timeSeconds}`);
+    timeSeconds++;
+    if (timeSeconds === 60) {
+      timeSeconds = 0;
+      timeMinutes++;
+    }
+    timer.textContent = `Timer: ${timeMinutes}:${timeSeconds}`;
+  }
+  // if (score === cardArray.length / 2) {
+  //   started = false;
+  // }
+};
+const myTimeout = setInterval(timerFunction, 1000);
