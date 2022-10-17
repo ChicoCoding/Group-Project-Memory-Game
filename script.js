@@ -24,7 +24,7 @@ const cardArray = [
   },
   {
     animal: "capybara",
-    image: "assets/capybara.jpg",
+    image: "assets/capybara.png",
     id: 5,
   },
   {
