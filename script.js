@@ -134,7 +134,13 @@ startButton.addEventListener("click", (e) => {
   started = true;
 });
 
+const resetButton = document.querySelector(".reset");
+resetButton.addEventListener("click", (e) => {
+  window.location.reload();
+});
+
 const timer = document.querySelector(".timer");
+const popup = document.querySelector(".popup");
 
 let timeSeconds = 0;
 let timeMinutes = 0;
@@ -146,10 +152,11 @@ const timerFunction = () => {
       timeSeconds = 0;
       timeMinutes++;
     }
-    timer.textContent = `Timer: ${timeMinutes}:${timeSeconds}`;
+    timer.textContent = `Timer: ${timeMinutes} min:${timeSeconds} sec`;
+    if (score === cardArray.length / 2) {
+      started = false;
+      popup.style.display = "block";
+    }
   }
-  // if (score === cardArray.length / 2) {
-  //   started = false;
-  // }
 };
 const myTimeout = setInterval(timerFunction, 1000);
