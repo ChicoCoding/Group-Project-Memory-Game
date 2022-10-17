@@ -9,17 +9,17 @@ const cardArray = [
   },
   {
     animal: "llama",
-    image: "assets/llama.jpg",
+    image: "assets/llama.png",
     id: 2,
   },
   {
     animal: "cockatoo",
-    image: "assets/cockatoo.jpg",
+    image: "assets/cockatoo.png",
     id: 3,
   },
   {
     animal: "bison",
-    image: "assets/bison.jpg",
+    image: "assets/bison.png",
     id: 4,
   },
   {
@@ -29,37 +29,37 @@ const cardArray = [
   },
   {
     animal: "llama",
-    image: "assets/llama.jpg",
+    image: "assets/llama.png",
     id: 6,
   },
   {
     animal: "cockatoo",
-    image: "assets/cockatoo.jpg",
+    image: "assets/cockatoo.png",
     id: 7,
   },
   {
     animal: "bison",
-    image: "assets/bison.jpg",
+    image: "assets/bison.png",
     id: 8,
   },
   {
     animal: "goose",
-    image: "assets/geese.jpg",
+    image: "assets/goose.png",
     id: 9,
   },
   {
     animal: "grizzly",
-    image: "assets/grizzly.jpg",
+    image: "assets/grizzly.png",
     id: 10,
   },
   {
     animal: "goose",
-    image: "assets/geese.jpg",
+    image: "assets/goose.png",
     id: 11,
   },
   {
     animal: "grizzly",
-    image: "assets/grizzly.jpg",
+    image: "assets/grizzly.png",
     id: 12,
   },
 ];
