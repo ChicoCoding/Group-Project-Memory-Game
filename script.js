@@ -4,7 +4,7 @@ const cardContainer = document.querySelector(".card-container");
 const cardArray = [
   {
     animal: "capybara",
-    image: "assets/capybara.jpg",
+    image: "assets/capybara.png",
     id: 1,
   },
   {
