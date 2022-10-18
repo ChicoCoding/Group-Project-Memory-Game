@@ -169,14 +169,14 @@ espanolButton.addEventListener("click", (e) => {
     espanol = true;
     popup.style.paddingTop = "0";
     popup.style.height = "50px";
-    resetButton.style.width = "150px";
+    resetButton.style.width = "200px";
     startButton.textContent = "Jugar";
     resetButton.textContent = "Jugar otra vez";
     popup.textContent = "¡Bien hecho!";
     title.textContent = "Juego de memoria animal";
   } else {
     espanol = false;
-    resetButton.style.width = "100px";
+    resetButton.style.width = "170px";
     startButton.textContent = "Start";
     resetButton.textContent = "Reset";
     popup.textContent = "Nice Work!";

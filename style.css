@@ -139,6 +139,7 @@ main {
   }
   .button-container {
     position: absolute;
+    width: 500px;
     top: 154px;
     left: 89px;
   }
@@ -171,8 +172,8 @@ main {
   }
   .timer {
     position: absolute;
-    top: 382px;
-    left: 216px;
+    top: 299px;
+    left: 321px;
     height: 91px;
     width: 170px;
     font-size: 2em;
