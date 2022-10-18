@@ -160,6 +160,30 @@ resetButton.addEventListener("click", (e) => {
   window.location.reload();
 });
 
+const title = document.querySelector("h1");
+
+let espanol = false;
+const espanolButton = document.querySelector(".espanol");
+espanolButton.addEventListener("click", (e) => {
+  if (espanol === false) {
+    espanol = true;
+    popup.style.paddingTop = "0";
+    popup.style.height = "50px";
+    resetButton.style.width = "150px";
+    startButton.textContent = "Jugar";
+    resetButton.textContent = "Jugar otra vez";
+    popup.textContent = "¡Bien hecho!";
+    title.textContent = "Juego de memoria animal";
+  } else {
+    espanol = false;
+    resetButton.style.width = "100px";
+    startButton.textContent = "Start";
+    resetButton.textContent = "Reset";
+    popup.textContent = "Nice Work!";
+    title.textContent = "Animal Memory Game";
+  }
+});
+
 const timer = document.querySelector(".timer");
 const popup = document.querySelector(".popup");
 
@@ -173,7 +197,11 @@ const timerFunction = () => {
       timeSeconds = 0;
       timeMinutes++;
     }
-    timer.textContent = `Timer: ${timeMinutes}:${timeSeconds}`;
+    if ((espanol = false)) {
+      timer.textContent = `Timer: ${timeMinutes}:${timeSeconds}`;
+    } else {
+      timer.textContent = `Reloj: ${timeMinutes}:${timeSeconds}`;
+    }
     if (score === cardArray.length / 2) {
       started = false;
       popup.style.display = "block";
