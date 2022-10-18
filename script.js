@@ -106,9 +106,7 @@ for (let i = 0; i < cardArray.length; i++) {
   flipCardBack.append(cardImage);
   cardImage.src = shuffledCards[i].image;
   cardImage.alt = shuffledCards[i].animal;
-  cardImage.style.width = "75px";
-  cardImage.style.height = "100px";
-  //  flipCardBack.classList.add("flip-card-back");
+  cardImage.classList.add("card-img");
 }
 
 let cardOne = null;
@@ -152,6 +150,9 @@ cardContainer.addEventListener("click", (e) => {
 const startButton = document.querySelector(".start");
 startButton.addEventListener("click", (e) => {
   started = true;
+  startButton.style.backgroundColor = "white";
+  startButton.style.color = "green";
+  timer.style.backgroundColor = "white";
 });
 
 const resetButton = document.querySelector(".reset");
