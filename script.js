@@ -170,7 +170,7 @@ espanolButton.addEventListener("click", (e) => {
     espanol = true;
     popup.style.paddingTop = "0";
     popup.style.height = "50px";
-    resetButton.style.width = "200px";
+    resetButton.style.width = "auto";
     startButton.textContent = "Jugar";
     resetButton.textContent = "Jugar otra vez";
     popup.textContent = "¡Bien hecho!";
@@ -178,7 +178,7 @@ espanolButton.addEventListener("click", (e) => {
     timer.textContent = `Reloj: ${timeMinutes}:${timeSeconds}`;
   } else {
     espanol = false;
-    resetButton.style.width = "170px";
+    resetButton.style.width = "auto";
     startButton.textContent = "Start";
     resetButton.textContent = "Reset";
     popup.textContent = "Nice Work!";

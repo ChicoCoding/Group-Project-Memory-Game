@@ -140,6 +140,9 @@ main {
   font-size: 15pt;
   font-weight: bold;
 }
+.button-container {
+  width: 670px;
+}
 @media only screen and (min-width: 1250px) {
   main {
     display: block;
@@ -159,6 +162,7 @@ main {
     display: inline-block;
     margin-right: 5%;
   }
+
   .btn {
     height: 91px;
     width: 170px;
