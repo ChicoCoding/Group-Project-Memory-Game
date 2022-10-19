@@ -175,6 +175,8 @@ espanolButton.addEventListener("click", (e) => {
     resetButton.textContent = "Jugar otra vez";
     popup.textContent = "¡Bien hecho!";
     title.textContent = "Juego de memoria animal";
+
+    espanolButton.textContent = "English";
     timer.textContent = `Reloj: ${timeMinutes}:${timeSeconds}`;
   } else {
     espanol = false;
@@ -183,6 +185,7 @@ espanolButton.addEventListener("click", (e) => {
     resetButton.textContent = "Reset";
     popup.textContent = "Nice Work!";
     title.textContent = "Animal Memory Game";
+    espanolButton.textContent = "Español";
     timer.textContent = `Timer: ${timeMinutes}:${timeSeconds}`;
   }
 });
