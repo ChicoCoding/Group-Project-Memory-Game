@@ -153,6 +153,7 @@ startButton.addEventListener("click", (e) => {
   startButton.style.backgroundColor = "white";
   startButton.style.color = "green";
   timer.style.backgroundColor = "white";
+  timer.style.color = "green";
 });
 
 const resetButton = document.querySelector(".reset");
@@ -199,7 +200,7 @@ const timerFunction = () => {
       timeSeconds = 0;
       timeMinutes++;
     }
-    if ((espanol = false)) {
+    if (espanol === false) {
       timer.textContent = `Timer: ${timeMinutes}:${timeSeconds}`;
     } else {
       timer.textContent = `Reloj: ${timeMinutes}:${timeSeconds}`;
